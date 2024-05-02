@@ -1,0 +1,329 @@
+/*
+ Author: Alexander Roeltgen
+ Date: 2/26
+ File Name: styles.css
+ */
+
+ /* CSS Reset */
+  body, header, nav, main, footer, img, h1, ul, section, aside, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color:white;
+  }
+
+  /* Style rule for images */
+   img {
+   max-width: 100%;
+   display: block;
+   margin: 0 auto;
+   }
+
+   /* Style rule for box sizing applies to all elements */
+ * {
+ box-sizing: border-box;
+ }
+
+#menu-links{
+display:none;
+}
+
+/* General body styles */
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Courier New', monospace;  /* Set the font to Courier New */    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background:black;
+
+}
+
+/* Global styles for links */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color:red;
+}
+/* Mobile navigation styles */
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.menu-icon div {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menu-links {
+    display: none;  /* Hidden by default, shown when menu icon is clicked */
+}
+
+#menu-links a {
+    display: block;  /* Stack links vertically when mobile menu is active */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Desktop navigation styles */
+.tab-desk {
+    display: none;  /* Hidden by default, displayed on larger screens */
+    text-align: center;
+}
+
+.tab-desk ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tab-desk ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.tab-desk ul li a {
+    font-size: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    text-align: center;
+    min-height:200px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 0px solid white;  /* A subtle divider */
+}
+
+footer p{
+  font-size:10px;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.logo{
+
+  max-width:180px;
+  margin:0 auto;
+}
+
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width:666px;
+}
+
+.hero-text p, .hero-text h1{
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold; /* This will make the text bold */
+}
+
+.hero-buttons .button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 100px;
+    font-weight: bold; /* This will make the text bold */
+
+    box-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+}
+
+.hero-buttons .button:hover {
+  background-color: red;
+}
+
+
+
+.footer-links{
+  display: none;  /* Hide footer navigation */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.column {
+    width: 30%; /* Set each column to take up roughly one-third of the container width */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.column img {
+    width: 100%; /* Make images fully responsive within their containers */
+    height: auto;
+    display: block;
+}
+
+.column p {
+    text-align: center; /* Center-align text */
+    padding-top: 10px;
+}
+
+
+
+.contact-form {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    margin:0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+.contact-form p{
+  text-align: justify;
+}
+
+/* mobile Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        position: static;
+        padding-top: 20px;
+    }
+
+    .hero-buttons .button {
+      min-width:100%;
+      margin:9px auto 0;
+    }
+
+    .logo{
+      max-width:126px;
+    }
+
+    .container {
+     flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+
+ .column {
+     width: 100%; /* Each column takes full width of the viewport */
+ }
+
+ .contact-form p{
+   font-size:9px;
+   text-align: justify;
+ }
+ .contact-form h2{
+   margin-top:0;
+
+}
+
+}
+
+
+/* Responsive desktop Design */
+@media screen and (min-width: 768px) {
+    .mobile-nav {
+        display: none;  /* Hide mobile navigation */
+    }
+
+    .tab-desk {
+        display: block;  /* Show desktop navigation */
+    }
+
+    #menu-links {
+        display: flex;  /* Ensure menu links are flexibly displayed on desktop */
+        justify-content: center;
+    }
+
+    .footer-links{
+      display: none;  /* Hide footer navigation */
+    }
+
+    .header-text{
+      display:none;
+    }
+}
+
+/* Special characters and design tweaks */
+.tab-desk span {
+    font-size: 24px;
+}
